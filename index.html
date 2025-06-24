@@ -164,6 +164,11 @@
 <div id="gifContainer" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 hidden">
   <img src="giff.gif" alt="Cute Celebration" class="w-80 h-auto rounded-lg shadow-lg">
 </div>
+    <!-- No response gif container -->
+<div id="gifNoContainer" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50 hidden">
+  <img src="gifff.gif" alt="Sad Please Gif" class="w-80 h-auto rounded-lg shadow-lg">
+</div>
+
 
 
     <div id="letter" class="letter">
@@ -220,10 +225,15 @@
 }
 
     function respondNo() {
-      setTimeout(() => {
-        alert("Please reconsider 😭 Will you attend?");
-      }, 200);
-    }
+  const gifNoContainer = document.getElementById('gifNoContainer');
+  gifNoContainer.classList.remove('hidden');
+
+  setTimeout(() => {
+    gifNoContainer.classList.add('hidden');
+    alert("Please reconsider 😭 Will you attend?");
+  }, 4000);
+}
+
   </script>
 
 </body>
